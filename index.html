@@ -11,20 +11,27 @@
     <title>Grocery List</title>
 </head>
 <body>
-    <h1 style="text-align: center;">Grocery List for Hla Than</h1>
+    <header>
+        <h1>Grocery List for Father</h1>
+    </header>
     <div class="container custom-bg">
         <div class="row justify-content-center">
             <div class="p-3 col-sm-8 col-md-6">
-                <input type="text" placeholder="Product" required>
+                <input type="text" placeholder="Product" required id="product">
             </div>
-            <div class="p-3 col-sm- col-md-6">
-                <input type="number" placeholder="Amount">
-                <button type="button" class="btn btn-primary">Submit</button>
+            <div class="p-3 col-sm-4 col-md-6">
+                <input type="number" placeholder="Amount" id="amount">
+                <button type="button" class="btn btn-primary" onclick="Submit()">Add</button>
             </div>
         </div>
     </div>
-    <div id="Submit">
-        
-    </div>
+    
+    <section>    
+        <div class="container" id="submit">
+            <div class="row justify-content-center">
+
+            </div>
+        </div>
+    </section>
 </body>
 </html>
