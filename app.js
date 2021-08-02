@@ -1,0 +1,1 @@
+const submitArea = document.getElementById('Submit');
