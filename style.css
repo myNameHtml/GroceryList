@@ -8,7 +8,6 @@
     font-family: 'Roboto Slab', serif;
     font-size: 2.5em;
     text-decoration: none;
-    text-align: start;
 }
 
 .submit-ans-amt{
@@ -16,7 +15,6 @@
     font-family: 'Roboto Slab', serif;
     font-size: 2.5em;
     text-decoration: none;
-    text-align: end;
 }
 
 .submit-ans:hover{

@@ -22,19 +22,15 @@ function addElement() {
 function AddBtn(){
     // create 2 buttons
     let btn = document.createElement('button'); 
-    let btn2 = document.createElement('button'); 
 
     // add the symbol
-    btn.innerHTML = "+";
-    btn2.innerHTML = "-";
+    btn.innerHTML = "<strong>"+"✓"+"</strong>";
 
     // add classes
     btn.className = "btn btn-success custom-btn";
-    btn2.className = "btn btn-danger custom-btn";
 
     // add content into DOM
     document.body.appendChild(btn);
-    document.body.appendChild(btn2);
 }
 
 function AddProductAndAmount(){
@@ -46,6 +42,7 @@ function AddProductAndAmount(){
         var linkTextProduct = document.createTextNode(document.getElementById('product').value+" ");
         var aAmount = document.createElement('a');
         var linkTextAmount = document.createTextNode(document.getElementById('amount').value+" ");
+        localStorage.setItem(document.getElementById('product').value, document.getElementById('amount').value);
 
         aProduct.appendChild(linkTextProduct);
         aProduct.className = "submit-ans-product";
