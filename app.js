@@ -1,18 +1,22 @@
 function Submit(){
+    addElement_Div();
     AddProductAndAmount();
     AddBtn();
-    addElement();
+    addElement_Br();
 }
 
-function addElement() {
+function addElement_Div() {
     // create a new div element
     const newDiv = document.createElement("div");
   
-    // and give it some content
-    const newContent = document.createTextNode("");
-  
-    // add the text node to the newly created div
-    newDiv.appendChild(newContent);
+    // add the newly created element and its content into the DOM
+    const currentDiv = document.getElementById("div");
+    document.body.insertBefore(newDiv, currentDiv);
+}
+
+function addElement_Br() {
+    // create a new div element
+    const newDiv = document.createElement("br");
   
     // add the newly created element and its content into the DOM
     const currentDiv = document.getElementById("div1");
@@ -20,14 +24,14 @@ function addElement() {
 }
 
 function AddBtn(){
-    // create 2 buttons
+    // create buttons
     let btn = document.createElement('button'); 
 
     // add the symbol
-    btn.innerHTML = "<strong>"+"✓"+"</strong>";
+    btn.innerHTML = "<strong>"+"CHECK"+"</strong>";
 
     // add classes
-    btn.className = "btn btn-success custom-btn";
+    btn.className = "checked-button";
 
     // add content into DOM
     document.body.appendChild(btn);
@@ -36,20 +40,19 @@ function AddBtn(){
 function AddProductAndAmount(){
     // only if content are in inputs
     if (document.getElementById('product').value && document.getElementById('amount').value) {
-
-        // add hyperlink
-        var aProduct = document.createElement('a');
+        
+        // create span
+        var aProduct = document.createElement('span');
         var linkTextProduct = document.createTextNode(document.getElementById('product').value+" ");
-        var aAmount = document.createElement('a');
+        var aAmount = document.createElement('span');
         var linkTextAmount = document.createTextNode(document.getElementById('amount').value+" ");
-        localStorage.setItem(document.getElementById('product').value, document.getElementById('amount').value);
 
         aProduct.appendChild(linkTextProduct);
-        aProduct.className = "submit-ans-product";
+        aProduct.className = "product";
         document.body.appendChild(aProduct);   
 
         aAmount.appendChild(linkTextAmount);
-        aAmount.className = "submit-ans-amt";
-        document.body.appendChild(aAmount);   
+        aAmount.className = "amount";
+        document.body.appendChild(aAmount);
     }
 }
