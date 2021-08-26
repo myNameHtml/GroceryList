@@ -1,17 +1,6 @@
 function Submit(){
-    addElement_Div();
     AddProductAndAmount();
-    AddBtn();
     addElement_Br();
-}
-
-function addElement_Div() {
-    // create a new div element
-    const newDiv = document.createElement("div");
-  
-    // add the newly created element and its content into the DOM
-    const currentDiv = document.getElementById("div");
-    document.body.insertBefore(newDiv, currentDiv);
 }
 
 function addElement_Br() {
@@ -23,36 +12,44 @@ function addElement_Br() {
     document.body.insertBefore(newDiv, currentDiv);
 }
 
-function AddBtn(){
-    // create buttons
-    let btn = document.createElement('button'); 
-
-    // add the symbol
-    btn.innerHTML = "<strong>"+"CHECK"+"</strong>";
-
-    // add classes
-    btn.className = "checked-button";
-
-    // add content into DOM
-    document.body.appendChild(btn);
-}
-
 function AddProductAndAmount(){
     // only if content are in inputs
     if (document.getElementById('product').value && document.getElementById('amount').value) {
         
-        // create span
+        // Create span
         var aProduct = document.createElement('span');
-        var linkTextProduct = document.createTextNode(document.getElementById('product').value+" ");
         var aAmount = document.createElement('span');
-        var linkTextAmount = document.createTextNode(document.getElementById('amount').value+" ");
 
+        // Add text to span
+        var linkTextProduct = document.createTextNode(document.getElementById('product').value+" ");
+        var linkTextAmount = document.createTextNode(document.getElementById('amount').value+" ");
+        
+        // Create Div
+        const newDiv = document.createElement("div");
+        const currentDiv = document.getElementById("div");
+        newDiv.id = "result";
+        document.body.insertBefore(newDiv, currentDiv);
+
+        // Append product span to div
         aProduct.appendChild(linkTextProduct);
         aProduct.className = "product";
-        document.body.appendChild(aProduct);   
+        newDiv.appendChild(aProduct);   
 
+        // Append amount span to div
         aAmount.appendChild(linkTextAmount);
         aAmount.className = "amount";
-        document.body.appendChild(aAmount);
+        newDiv.appendChild(aAmount);
+
+        // Create Button
+        let btn = document.createElement('button');
+        btn.innerHTML = "<strong>"+"CHECK"+"</strong>";
+        btn.className = "checked-button";
+        btn.id = "check-btn";
+        newDiv.appendChild(btn);
     }
+
+    document.getElementById("check-btn").addEventListener("click", function(){
+        const checkedDiv = document.getElementById('result');
+        checkedDiv.remove();
+    });
 }
