@@ -2,30 +2,47 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+body{
+    background-image: url("img/MyanmarBG.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
 header{
+    letter-spacing: 5px;
     text-align: center;
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.5em;
+    font-family: 'Alumni Sans', sans-serif;
+    font-size: 3em;
+    text-decoration: underline;
+    transition: 0.2s;
+}
+
+header:hover{
+    letter-spacing: 10px;
 }
 
 input{
-    margin-top: 100px;
     padding: 1em;
     font-size: 1em;
     font-family: 'Poppins', sans-serif;
-    border: solid black;
-    border-radius: 50px;
+    border: 1px solid black;
 }
 
 .input-container{
-    display: flex;
-    justify-content: space-evenly;
+    margin-top: 100px;
+    display:flex;
+    justify-content: center;
+    margin-bottom: 50px;
 }
 
 input:focus, textarea:focus, select:focus{
@@ -33,70 +50,134 @@ input:focus, textarea:focus, select:focus{
 }
 
 #submitButton{
-    display: flex;
-    justify-content: center;
-}
-
-#submitButton button{
-    padding: 1em;
-    font-size: 0.8em;
+    width: 65px;
     font-family: 'Poppins', sans-serif;
-    border: solid black;
-    border-radius: 50px;
-    transition: .2s;
+    border: 1px solid black;
+    font-size: 2em;
 }
 
-#submitButton button:hover{
-    letter-spacing: 5px;
-}
-
-#submitButton button:focus{
+#submitButton:focus{
     font-weight: 1000;
     border: solid rgb(82, 82, 82);
 }
 
 .checked-button{
-    padding: 10px 10px 10px 10px;
-    background-color: rgb(64, 255, 47);
+    margin-right: 10px;
+    padding: 10px;
+    background-color: rgb(255, 47, 47);
     font-weight: 1000;
     font-size: 1.5em;
     border-color: black;
     border-style: none;
-    border-radius: 15px;
+    border-radius: 10px;
     font-family: 'Source Sans Pro', sans-serif;
-    margin: 10px;
+    border: 5px solid rgb(0, 0, 0);
 }
 
 .checked-button:hover{
-    background-color: rgb(55, 199, 42);
+    background-color: rgb(199, 42, 42);
 }
 
-.product{
+.list-font{
     font-weight: 1000;
-    font-size: 2em;
-    letter-spacing: 2.5px;
+    font-size: 3em;
     font-family: 'Roboto Condensed', sans-serif;
-    margin: 10px;
+    padding: 10px;
 }
 
-.amount{
-    font-weight: 1000;
-    font-size: 2em;
-    letter-spacing: 2.5px;
-    font-family: 'Roboto Condensed', sans-serif;
-    margin: 10px;
-}
-
-.grid-product-amount{
+#items-container{
     display: flex;
-    margin-top: 50px;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 1000;
-    font-size: 2em;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    width: 75%;
+    border: 5px solid rgb(53, 53, 53);
+    height: 100px;
+    background-color:rgba(90, 90, 90, 0.5);
+    margin-top: 10px;
 }
 
-#result{
-    display: flex;
-    justify-content: space-evenly;
+.water-mark{
+    font-size: 20px;
+    font-family: 'Dancing Script', cursive;
+    font-weight: 250;
+    text-align: end;
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    color: white;
+}
+
+@media (max-width: 1000px) {
+    .list-font{
+        font-weight: 1000;
+        font-size: 2em;
+        letter-spacing: 0px;
+        padding: 5px;
+    }
+}
+
+@media (max-width: 650px){
+    header{
+        letter-spacing: 2px;
+        font-size: 2em;
+    }
+
+    header:hover{
+        letter-spacing: 5px;
+    }
+
+    input{
+        padding: 10px;
+        font-size: 1em;
+    }
+    
+    .input-container{
+        margin-top: 25px;
+        margin-bottom: 50px;
+    }
+    
+    #submitButton{
+        width: 50px;
+    }
+
+    #submitButton:hover{
+        letter-spacing: 3px;
+    }
+
+    .checked-button{
+        margin-right: 5px;
+        padding: 2px;
+        font-size: 1em;
+        border: 3px solid rgb(0, 0, 0);
+    }
+
+    .list-font{
+        font-weight: 1000;
+        font-size: 1.3em;
+        letter-spacing: 0px;
+        padding: 5px;
+    }
+    
+    #items-container{
+        width: 100%;
+        height: 75px;
+    }
+
+    body{
+        background-image: url("img/MyanmarBG-2.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .water-mark{
+        font-size: 10px;
+        font-family: 'Dancing Script', cursive;
+        font-weight: 250;
+        text-align: end;
+        position: fixed;
+        bottom: 0px;
+        right: 0px;
+        color: white;
+    }
 }

@@ -4,25 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="app.js"></script>
     <link rel="stylesheet" href="style.css">
     <title>Grocery List</title>
 </head>
 <body>
     <header>
-        <h1>Grocery List for Father</h1>
+        <h1>Grocery List</h1>
     </header>
     <main>
         <div class="input-container">
-            <input tabindex="1" id="product" type="text" placeholder="Product name" required>
-            <input tabindex="2" id="amount" type="number" placeholder="Product amount" required>
+            <button id="submitButton" tabindex="3">+</button>
+            <input tabindex="1" id="product" maxlength="15" autocomplete="off" type="text" placeholder="Add Product">
         </div>
-        <div id="submitButton"><button tabindex="3" onclick="Submit()">Submit</button></div>
-        <div class="grid-product-amount">
-            <span>PRODUCT</span>
-            <span>AMOUNT</span>
-            <span>CHECKED</span>
+
+        <div id="list"></div>
+        <div class="water-mark">
+            <p>Made with Love!</p>
+            <p>By Kyaw Htet Htun. For Father!</p>
         </div>
     </main>
+    <script src="app.js"></script>
 </body>
 </html>
