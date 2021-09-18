@@ -40,7 +40,7 @@ input{
 
 .input-container{
     margin-top: 100px;
-    display:flex;
+    display: flex;
     justify-content: center;
     margin-bottom: 50px;
 }
@@ -64,18 +64,20 @@ input:focus, textarea:focus, select:focus{
 .checked-button{
     margin-right: 10px;
     padding: 10px;
-    background-color: rgb(255, 47, 47);
     font-weight: 1000;
     font-size: 1.5em;
-    border-color: black;
     border-style: none;
     border-radius: 10px;
     font-family: 'Source Sans Pro', sans-serif;
-    border: 5px solid rgb(0, 0, 0);
+    background: linear-gradient(to right, rgb(54,96,242), rgb(53,90,238));
+    border: 3.5px solid rgb(40,67,157);
+    color: white;
+    transition: 0.2s;
 }
 
 .checked-button:hover{
-    background-color: rgb(199, 42, 42);
+    background: linear-gradient(to right, rgb(52, 90, 224), rgb(47, 79, 206));
+    letter-spacing: 2px;
 }
 
 .list-font{
@@ -83,6 +85,11 @@ input:focus, textarea:focus, select:focus{
     font-size: 3em;
     font-family: 'Roboto Condensed', sans-serif;
     padding: 10px;
+    color: white;
+}
+
+.list-font:hover{
+    text-decoration: underline;
 }
 
 #items-container{
@@ -160,8 +167,10 @@ input:focus, textarea:focus, select:focus{
     }
     
     #items-container{
-        width: 100%;
+        width: 75%;
         height: 75px;
+        display: flex;
+        justify-content: space-between;
     }
 
     body{

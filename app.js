@@ -30,7 +30,7 @@ function AddItems(){
 
     // Create button for removing item
     var btn = document.createElement("button");
-    btn.innerText = "DELETE"
+    btn.innerText = "🗑️ DELETE"
     btn.className = "checked-button";
     newDiv.appendChild(btn);
 
